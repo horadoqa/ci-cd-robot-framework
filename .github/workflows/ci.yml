@@ -48,5 +48,4 @@ jobs:
       - name: Run Robot Framework Tests
         run: |
           export CHROME_USER_DATA_DIR=$(mktemp -d)
-          robot --variable CHROME_USER_DATA_DIR:${CHROME_USER_DATA_DIR} --variable CHROMEDRIVER_PATH:"/usr/bin/chromedriver" teste/login.robot || exit 1
-
+          robot --variable CHROME_USER_DATA_DIR:${CHROME_USER_DATA_DIR} --variable CHROMEDRIVER_PATH:/usr/bin/chromedriver teste/login.robot || exit 1
