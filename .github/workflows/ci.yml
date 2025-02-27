@@ -49,4 +49,5 @@ jobs:
         run: |
           export CHROME_USER_DATA_DIR=$(mktemp -d)
           echo "CHROME_USER_DATA_DIR=$CHROME_USER_DATA_DIR"  # Imprime para depuração
-          robot --variable CHROME_USER_DATA_DIR:${CHROME_USER_DATA_DIR} teste/login.robot || exit 1
+          export WEBDRIVER_CHROME_PATH="/usr/bin/chromedriver"
+          robot --variable CHROME_USER_DATA_DIR:${CHROME_USER_DATA_DIR} --variable WEBDRIVER_CHROME_PATH:${WEBDRIVER_CHROME_PATH} teste/login.robot || exit 1
