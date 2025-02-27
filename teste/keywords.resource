@@ -3,10 +3,10 @@ Library    SeleniumLibrary
 
 *** Variables ***
 ${CHROMEDRIVER_PATH}    /usr/bin/chromedriver   # Defina o caminho do seu ChromeDriver
-${CHROME_USER_DATA_DIR}  /tmp/chrome_data
+${CHROME_USER_DATA_DIR}     ${CHROME_USER_DATA_DIR}
 
 ${url_site}    https://horadoqa.github.io/login/
-${browser}    chrome
+${browser}    Chrome
 ${locator_username}    //*[@id="username"]
 ${locator_password}    //*[@id="password"]
 ${locator_button}    //button[contains(text(),"Entrar")]
@@ -17,6 +17,7 @@ ${validar}      //h1[contains(text(),"Bem-vindo")]
 *** Keywords ***
 Abrir site
     Open Browser    ${url_site}    ${browser}    --user-data-dir=${CHROME_USER_DATA_DIR}    --chromedriver=${CHROMEDRIVER_PATH}
+    Log    CHROME_USER_DATA_DIR = ${CHROME_USER_DATA_DIR}
 
 Campo Vazio
     Sleep    3s
