@@ -2,7 +2,7 @@
 Library    SeleniumLibrary
 
 *** Variables ***
-${URL}                    https://horadoqa.github.io/login/
+${URL}                    https://horadoqa.github.io/ci-cd-robot-framework/
 ${BROWSER}                Chrome
 ${locator_username}       //*[@id="username"]
 ${locator_password}       //*[@id="password"]
