@@ -23,7 +23,7 @@ jobs:
     name: Deploy GitHub Pages 🌐
     runs-on: ubuntu-24.04
     needs: 
-      - merge
+      - ci
     permissions:
       contents: read
       pages: write
