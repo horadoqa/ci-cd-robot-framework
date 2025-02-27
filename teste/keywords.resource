@@ -16,7 +16,7 @@ ${validar}      //h1[contains(text(),"Bem-vindo")]
 
 *** Keywords ***
 Abrir site
-    Open Browser    ${url_site}    ${browser}    --user-data-dir=${CHROME_USER_DATA_DIR}    --webdriver-chrome=${CHROMEDRIVER_PATH}
+    Open Browser    ${url_site}    ${browser}    --user-data-dir=${CHROME_USER_DATA_DIR}    --chromedriver=${CHROMEDRIVER_PATH}
 
 Campo Vazio
     Sleep    3s
