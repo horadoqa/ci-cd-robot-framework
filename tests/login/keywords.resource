@@ -2,20 +2,18 @@
 Library    SeleniumLibrary
 
 *** Variables ***
-${CHROMEDRIVER_PATH}    /usr/bin/chromedriver   # Defina o caminho do seu ChromeDriver
-
-${url_site}    https://horadoqa.github.io/login/
-${browser}    Chrome
-${locator_username}    //*[@id="username"]
-${locator_password}    //*[@id="password"]
-${locator_button}    //button[contains(text(),"Entrar")]
-${error_dados_vazios}    //p[contains(text(),"E-mail e senha são obrigatórios!")]
+${URL}                    https://horadoqa.github.io/login/
+${BROWSER}                Chrome
+${locator_username}       //*[@id="username"]
+${locator_password}       //*[@id="password"]
+${locator_button}         //button[contains(text(),"Entrar")]
+${error_dados_vazios}     //p[contains(text(),"E-mail e senha são obrigatórios!")]
 ${error_dados_errados}    //p[contains(text(),"E-mail ou senha inválidos!")]
-${validar}      //h1[contains(text(),"Bem-vindo")]
+${validar}                //h1[contains(text(),"Bem-vindo")]
 
 *** Keywords ***
 Abrir site
-    Open Browser    ${url_site}    ${browser}   --chromedriver=${CHROMEDRIVER_PATH}
+    Open Browser    ${URL}    ${BROWSER}   options=add_argument("--headless")
 
 Campo Vazio
     Sleep    3s
