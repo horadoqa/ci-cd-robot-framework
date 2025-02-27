@@ -41,4 +41,5 @@ jobs:
 
       - name: Run Robot Framework Tests
         run: |
-          robot teste/login.robot || exit 1
+          export CHROME_USER_DATA_DIR=$(mktemp -d)
+          robot teste/login.robot --variable CHROME_USER_DATA_DIR:${CHROME_USER_DATA_DIR} || exit 1
