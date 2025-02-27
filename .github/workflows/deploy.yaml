@@ -22,8 +22,6 @@ jobs:
   deploy:
     name: Deploy GitHub Pages 🌐
     runs-on: ubuntu-24.04
-    needs: 
-      - ci
     permissions:
       contents: read
       pages: write
@@ -43,7 +41,7 @@ jobs:
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
         with:
-          path: ./site/
+          path: /site
 
       - name: Deploy to Github Pages
         id: deployment
