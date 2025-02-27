@@ -6,7 +6,8 @@ on:
   workflow_dispatch:
 
 permissions:
-  contents: readname: Continuos Integration
+  contents: 
+    readname: Continuos Integration
 
 # on: pull_request
 # on: [pull_request, push, issues, issue_comment]
