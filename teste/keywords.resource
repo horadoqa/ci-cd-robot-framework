@@ -1,9 +1,8 @@
-** Settings **
-Library  SeleniumLibrary
+*** Settings ***
+Library    SeleniumLibrary
 
-** Variables **
-
-${CHROMEDRIVER_PATH}    /path/to/chromedriver
+*** Variables ***
+${CHROMEDRIVER_PATH}    /usr/bin/chromedriver
 ${CHROME_USER_DATA_DIR}  /tmp/chrome_data
 
 ${url_site}    https://horadoqa.github.io/login/
@@ -15,10 +14,9 @@ ${error_dados_vazios}    //p[contains(text(),"E-mail e senha são obrigatórios!
 ${error_dados_errados}    //p[contains(text(),"E-mail ou senha inválidos!")]
 ${validar}      //h1[contains(text(),"Bem-vindo")]
 
-** Keywords **
+*** Keywords ***
 Abrir site
-    Open Browser    ${url_site}    ${browser}    --user-data-dir=${CHROME_USER_DATA_DIR}
-    # Maximize Browser Window
+    Open Browser    ${url_site}    ${browser}    --user-data-dir=${CHROME_USER_DATA_DIR}    --webdriver-chrome=${CHROMEDRIVER_PATH}
 
 Campo Vazio
     Sleep    3s
