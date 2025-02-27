@@ -1,5 +1,9 @@
 # ci-cd-robot-framework
 
+<h1 align="center">
+    <img src="images/robot-logo.png">
+</h1>
+
 Criando processo de CI/CD com Robot Framework
 
 ## Etapas para configurar o CI/CD com Robot Framework e deploy no GitHub Pages:

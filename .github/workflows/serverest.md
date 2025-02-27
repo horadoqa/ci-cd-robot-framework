@@ -98,34 +98,4 @@ jobs:
         with:
           name: robot-framework-report
           path: ./*.html
-
-  # deploy:
-  #   name: Deploy GitHub Pages 🌐
-  #   runs-on: ubuntu-24.04
-  #   needs: 
-  #     - merge
-  #   permissions:
-  #     contents: read
-  #     pages: write
-  #     id-token: write
-  #   environment:
-  #     name: github-pages
-  #     url: https://clestonv.github.io/robot_api_serverest/report.html
-  #   steps:
-  #     - name: Setup Pages
-  #       uses: actions/configure-pages@v5
-
-  #     - name: Download Artifacts
-  #       uses: actions/download-artifact@v4
-  #       with: 
-  #         name: robot-framework-report
-
-  #     - name: Upload artifact
-  #       uses: actions/upload-pages-artifact@v3
-  #       with:
-  #         path: ./
-
-  #     - name: Deploy to Github Pages
-  #       id: deployment
-  #       uses: actions/deploy-pages@v4
         
