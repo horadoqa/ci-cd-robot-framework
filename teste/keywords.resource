@@ -3,6 +3,9 @@ Library  SeleniumLibrary
 
 ** Variables **
 
+${CHROMEDRIVER_PATH}    /path/to/chromedriver
+${CHROME_USER_DATA_DIR}  /tmp/chrome_data
+
 ${url_site}    https://horadoqa.github.io/login/
 ${browser}    chrome
 ${locator_username}    //*[@id="username"]
@@ -14,7 +17,7 @@ ${validar}      //h1[contains(text(),"Bem-vindo")]
 
 ** Keywords **
 Abrir site
-    Open Browser    ${url_site}    ${browser}
+    Open Browser    ${url_site}    ${browser}    --user-data-dir=${CHROME_USER_DATA_DIR}
     # Maximize Browser Window
 
 Campo Vazio
