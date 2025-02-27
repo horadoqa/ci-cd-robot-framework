@@ -2,7 +2,7 @@
 Library    SeleniumLibrary
 
 *** Variables ***
-${CHROMEDRIVER_PATH}    /usr/bin/chromedriver
+${CHROMEDRIVER_PATH}    /usr/bin/chromedriver   # Defina o caminho do seu ChromeDriver
 ${CHROME_USER_DATA_DIR}  /tmp/chrome_data
 
 ${url_site}    https://horadoqa.github.io/login/
@@ -20,10 +20,6 @@ Abrir site
 
 Campo Vazio
     Sleep    3s
-    # Click Element    ${locator_username}
-    # Input Text    ${locator_username}    text=
-    # Click Element    ${locator_password}
-    # Input Text    ${locator_password}    text=
     Click Element    ${locator_button}
     Sleep    3s
     Wait Until Element Is Visible    ${error_dados_vazios}    5
