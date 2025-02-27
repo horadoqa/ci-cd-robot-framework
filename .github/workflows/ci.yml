@@ -1,24 +1,16 @@
 name: Test and Deploy static content to Pages
 
-on:
-  push:
-    branches: ["main"]
-  workflow_dispatch:
-
-permissions:
-  contents: 
-    readname: Continuos Integration
-
-# on: pull_request
-# on: [pull_request, push, issues, issue_comment]
 on: 
   workflow_dispatch:
   push:
     branches:
       - main
 
+permissions:
+  contents: read
+
 jobs:
-  Continuos-Integration:
+  Continuous-Integration:
     name: Login Tests
     runs-on: ubuntu-24.04
 
@@ -33,7 +25,7 @@ jobs:
 
       - name: Install dependencies
         run: |
-          echo Instalação das depedências do Projeto
+          echo Instalação das dependências do Projeto
           pip install robotframework
           pip install robotframework-requests
 
