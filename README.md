@@ -8,8 +8,9 @@ Criando processo de CI/CD com Robot Framework
 - [X] Clonar repositório localmente
 - [ ] Criar nova branch para o desenvolvimento de CI/CD
 - [ ] Configurar ambiente de desenvolvimento local
-- [ ] Instalar dependências do projeto (como Robot Framework)
-- [ ] Criar testes automatizados usando Robot Framework
+    - [ ] Criar a página de Login
+    - [ ] Instalar dependências do projeto (como Robot Framework)
+    - [ ] Criar testes automatizados usando Robot Framework
 - [ ] Configurar GitHub Actions para integração contínua (CI)
     - [ ] Criar um arquivo de workflow do GitHub Actions (`.github/workflows/ci.yml`)
     - [ ] Definir jobs de build, teste e linting no workflow
