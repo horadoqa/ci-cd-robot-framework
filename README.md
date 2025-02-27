@@ -4,8 +4,8 @@ Criando processo de CI/CD com Robot Framework
 
 ## Etapas para configurar o CI/CD com Robot Framework e deploy no GitHub Pages:
 
-- [ ] Criar repositório no GitHub
-- [ ] Clonar repositório localmente
+- [X] Criar repositório no GitHub
+- [X] Clonar repositório localmente
 - [ ] Criar nova branch para o desenvolvimento de CI/CD
 - [ ] Configurar ambiente de desenvolvimento local
 - [ ] Instalar dependências do projeto (como Robot Framework)
