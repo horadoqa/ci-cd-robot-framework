@@ -1,4 +1,4 @@
-name: Deploy static content to Pages
+name: Test and Deploy static content to Pages
 
 on:
   push:
@@ -6,46 +6,44 @@ on:
   workflow_dispatch:
 
 permissions:
-  contents: read
-  pages: write
-  id-token: write
+  contents: readname: Continuos Integration
 
-concurrency:
-  group: "pages"
-  cancel-in-progress: false
+# on: pull_request
+# on: [pull_request, push, issues, issue_comment]
+on: 
+  workflow_dispatch:
+  push:
+    branches:
+      - main
 
 jobs:
   Continuos-Integration:
-    runs-on: ubuntu-latest
+    name: Login Tests
+    runs-on: ubuntu-24.04
+
     steps:
-      - name: Checkout code
+      - name: Checkout Repository
         uses: actions/checkout@v4
 
-      - name: Setup Python
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+
+      - name: Install dependencies
         run: |
-          sudo apt-get update
-          sudo apt install python3
-          sudo apt install wget
+          echo Instalação das depedências do Projeto
           pip install robotframework
-          pip install robotframework-seleniumlibrary
-          pip install webdriver-manager
-          sudo apt install google-chrome-stable
+          pip install robotframework-requests
 
-      - name: Install ChromeDriver using WebDriver Manager
+      - name: Run Robot Framework tests
         run: |
-          python3 -m pip install webdriver-manager
-
-      - name: Verify Chrome version
-        run: |
-          google-chrome --version
-          chromedriver --version
-
-      - name: Verify chromedriver path
-        run: |
-          which chromedriver
-          ls -l /usr/bin/chromedriver
-
-      - name: Run Robot Framework Tests
-        run: |
-          export CHROME_USER_DATA_DIR=$(mktemp -d)
-          robot --variable CHROME_USER_DATA_DIR:${CHROME_USER_DATA_DIR} --variable CHROMEDRIVER_PATH:/usr/bin/chromedriver teste/login.robot || exit 1
+          echo Executando os testes de Login
+          robot --name "Login Tests" --outputdir results/ tests 
+      
+      - name: Test Report
+        uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: robot-framework-report-api
+          path: results/
