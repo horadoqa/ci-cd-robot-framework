@@ -26,8 +26,7 @@ jobs:
       - name: Install dependencies
         run: |
           echo Instalação das dependências do Projeto
-          pip install robotframework
-          pip install robotframework-requests
+          pip install robotframework-seleniumlibrary
 
       - name: Run Robot Framework tests
         run: |
