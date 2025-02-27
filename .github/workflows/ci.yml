@@ -39,10 +39,14 @@ jobs:
         run: |
           google-chrome --version
 
-      - name: Run Robot Framework Tests
+      - name: Verify 
         run: |
-          # Cria um diretório temporário único para o Chrome
-          export CHROME_USER_DATA_DIR=$(mktemp -d)
-          echo "CHROME_USER_DATA_DIR=$CHROME_USER_DATA_DIR"  # Imprime para depuração
-          # Executa o Robot Framework, passando a variável correta
-          robot --variable CHROME_USER_DATA_DIR:${CHROME_USER_DATA_DIR} teste/login.robot || exit 1
+          which chromedriver
+
+      # - name: Run Robot Framework Tests
+      #   run: |
+      #     # Cria um diretório temporário único para o Chrome
+      #     export CHROME_USER_DATA_DIR=$(mktemp -d)
+      #     echo "CHROME_USER_DATA_DIR=$CHROME_USER_DATA_DIR"  # Imprime para depuração
+      #     # Executa o Robot Framework, passando a variável correta
+      #     robot --variable CHROME_USER_DATA_DIR:${CHROME_USER_DATA_DIR} teste/login.robot || exit 1
