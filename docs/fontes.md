@@ -1,10 +1,4 @@
-<h1 align="center">
-    <img src="resources/img/robot-logo.png">
-</h1>
 
-## 📋 Sobre
-
-Este **Projeto** foi criado para um mini curso de CI/CD com Robot Framework usando GitActions
 
 ## 🚀 Tecnologias
 - [Python](https://www.python.org/)
@@ -36,8 +30,4 @@ $ cd robot_api_servrest
 
 3. Executando os testes
 $ robot -d /result/ tests/
-
 ```
-
-
-Feito por Cleberson Osorio 🌊
