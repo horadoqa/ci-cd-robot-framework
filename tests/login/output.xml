@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 7.1.1 (Python 3.10.12 on linux)" generated="2025-02-28T17:09:39.984046" rpa="false" schemaversion="5">
+<suite id="s1" name="Cenario5" source="/home/rfahham/projetos/ci-cd-robot-framework/tests/login/cenario5.robot">
+<test id="s1-t1" name="Cenário 5: Inserir e-mail e senha válidos" line="5">
+<kw name="Abrir site" owner="keywords">
+<kw name="Open Browser" owner="SeleniumLibrary">
+<msg time="2025-02-28T17:09:40.162602" level="INFO">Opening browser 'Chrome' to base url 'https://horadoqa.github.io/ci-cd-robot-framework/'.</msg>
+<arg>${URL}</arg>
+<arg>${BROWSER}</arg>
+<arg>options=add_argument("--headless")</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<status status="PASS" start="2025-02-28T17:09:40.162298" elapsed="0.778363"/>
+</kw>
+<status status="PASS" start="2025-02-28T17:09:40.161555" elapsed="0.779487"/>
+</kw>
+<kw name="Ambos Válidos" owner="keywords">
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2025-02-28T17:09:40.943210" level="INFO">Clicking element '//*[@id="username"]'.</msg>
+<arg>${locator_username}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2025-02-28T17:09:40.941976" elapsed="0.129338"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2025-02-28T17:09:41.072674" level="INFO">Typing text 'usuario@example.com' into text field '//*[@id="username"]'.</msg>
+<arg>${locator_username}</arg>
+<arg>text=usuario@example.com</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2025-02-28T17:09:41.071717" elapsed="0.154003"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2025-02-28T17:09:41.227139" level="INFO">Clicking element '//*[@id="password"]'.</msg>
+<arg>${locator_password}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2025-02-28T17:09:41.226256" elapsed="0.108506"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2025-02-28T17:09:41.335464" level="INFO">Typing text '1q2w3e4r' into text field '//*[@id="password"]'.</msg>
+<arg>${locator_password}</arg>
+<arg>text=1q2w3e4r</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2025-02-28T17:09:41.335054" elapsed="0.099056"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2025-02-28T17:09:41.434678" level="INFO">Clicking element '//button[contains(text(),"Entrar")]'.</msg>
+<arg>${locator_button}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2025-02-28T17:09:41.434382" elapsed="0.687374"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2025-02-28T17:09:45.122732" level="INFO">Slept 3 seconds.</msg>
+<arg>3s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2025-02-28T17:09:42.122107" elapsed="3.000772"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${validar}</arg>
+<arg>5</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2025-02-28T17:09:45.123106" elapsed="0.032812"/>
+</kw>
+<kw name="Element Should Be Visible" owner="SeleniumLibrary">
+<msg time="2025-02-28T17:09:45.176648" level="INFO">Element '//h1[contains(text(),"Bem-vindo")]' is displayed.</msg>
+<arg>${validar}</arg>
+<doc>Verifies that the element identified by ``locator`` is visible.</doc>
+<status status="PASS" start="2025-02-28T17:09:45.156140" elapsed="0.020656"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2025-02-28T17:10:05.177347" level="INFO">Slept 20 seconds.</msg>
+<arg>20s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2025-02-28T17:09:45.177033" elapsed="20.000443"/>
+</kw>
+<status status="PASS" start="2025-02-28T17:09:40.941475" elapsed="24.236157"/>
+</kw>
+<kw name="Fechar site" owner="keywords">
+<kw name="Close Browser" owner="SeleniumLibrary">
+<doc>Closes the current browser.</doc>
+<status status="PASS" start="2025-02-28T17:10:05.178238" elapsed="0.063817"/>
+</kw>
+<status status="PASS" start="2025-02-28T17:10:05.177971" elapsed="0.064251"/>
+</kw>
+<status status="PASS" start="2025-02-28T17:09:40.160774" elapsed="25.081796"/>
+</test>
+<status status="PASS" start="2025-02-28T17:09:39.985136" elapsed="25.258110"/>
+</suite>
+<statistics>
+<total>
+<stat pass="1" fail="0" skip="0">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat pass="1" fail="0" skip="0" id="s1" name="Cenario5">Cenario5</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>
