@@ -1,0 +1,398 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 7.1.1 (Python 3.10.12 on linux)" generated="2025-02-28T17:01:30.669919" rpa="false" schemaversion="5">
+<suite id="s1" name="Suite De Testes" source="/home/rfahham/projetos/ci-cd-robot-framework/tests/login/suite/suite_de_testes.robot">
+<test id="s1-t1" name="Cenário 1: Campo Vazio" line="5">
+<kw name="Abrir site" owner="keywords">
+<kw name="Open Browser" owner="SeleniumLibrary">
+<msg time="2025-02-28T17:01:30.811318" level="INFO">Opening browser 'Chrome' to base url 'https://horadoqa.github.io/ci-cd-robot-framework/'.</msg>
+<arg>${URL}</arg>
+<arg>${BROWSER}</arg>
+<arg>options=add_argument("--headless")</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<status status="PASS" start="2025-02-28T17:01:30.811008" elapsed="0.733077"/>
+</kw>
+<status status="PASS" start="2025-02-28T17:01:30.810250" elapsed="0.734047"/>
+</kw>
+<kw name="Campo Vazio" owner="keywords">
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2025-02-28T17:01:34.546402" level="INFO">Slept 3 seconds.</msg>
+<arg>3s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2025-02-28T17:01:31.545031" elapsed="3.001817"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2025-02-28T17:01:34.549070" level="INFO">Clicking element '//button[contains(text(),"Entrar")]'.</msg>
+<arg>${locator_button}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2025-02-28T17:01:34.547653" elapsed="0.125465"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2025-02-28T17:01:37.673766" level="INFO">Slept 3 seconds.</msg>
+<arg>3s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2025-02-28T17:01:34.673371" elapsed="3.000560"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${error_dados_vazios}</arg>
+<arg>5</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2025-02-28T17:01:37.674147" elapsed="0.023978"/>
+</kw>
+<kw name="Element Should Be Visible" owner="SeleniumLibrary">
+<msg time="2025-02-28T17:01:37.717752" level="INFO">Element '//p[contains(text(),"E-mail e senha são obrigatórios!")]' is displayed.</msg>
+<arg>${error_dados_vazios}</arg>
+<doc>Verifies that the element identified by ``locator`` is visible.</doc>
+<status status="PASS" start="2025-02-28T17:01:37.698330" elapsed="0.019588"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2025-02-28T17:01:40.718757" level="INFO">Slept 3 seconds.</msg>
+<arg>3s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2025-02-28T17:01:37.718176" elapsed="3.000951"/>
+</kw>
+<status status="PASS" start="2025-02-28T17:01:31.544664" elapsed="9.174861"/>
+</kw>
+<kw name="Fechar site" owner="keywords">
+<kw name="Close Browser" owner="SeleniumLibrary">
+<doc>Closes the current browser.</doc>
+<status status="PASS" start="2025-02-28T17:01:40.721868" elapsed="0.113794"/>
+</kw>
+<status status="PASS" start="2025-02-28T17:01:40.720661" elapsed="0.115251"/>
+</kw>
+<status status="PASS" start="2025-02-28T17:01:30.809532" elapsed="10.026763"/>
+</test>
+<test id="s1-t2" name="Cenário 2: Inserir e-mail válido mas senha inválida" line="10">
+<kw name="Abrir site" owner="keywords">
+<kw name="Open Browser" owner="SeleniumLibrary">
+<msg time="2025-02-28T17:01:40.839053" level="INFO">Opening browser 'Chrome' to base url 'https://horadoqa.github.io/ci-cd-robot-framework/'.</msg>
+<arg>${URL}</arg>
+<arg>${BROWSER}</arg>
+<arg>options=add_argument("--headless")</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<status status="PASS" start="2025-02-28T17:01:40.838383" elapsed="0.677789"/>
+</kw>
+<status status="PASS" start="2025-02-28T17:01:40.837867" elapsed="0.678529"/>
+</kw>
+<kw name="E-mail Válido e Senha Inválida" owner="keywords">
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2025-02-28T17:01:41.532360" level="INFO">Clicking element '//*[@id="username"]'.</msg>
+<arg>${locator_username}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2025-02-28T17:01:41.517305" elapsed="0.108454"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2025-02-28T17:01:41.626223" level="INFO">Typing text 'usuario@example.com' into text field '//*[@id="username"]'.</msg>
+<arg>${locator_username}</arg>
+<arg>text=usuario@example.com</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2025-02-28T17:01:41.625959" elapsed="0.109329"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2025-02-28T17:01:41.735777" level="INFO">Clicking element '//*[@id="password"]'.</msg>
+<arg>${locator_password}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2025-02-28T17:01:41.735499" elapsed="0.079708"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2025-02-28T17:01:41.815736" level="INFO">Typing text 'abcd1234' into text field '//*[@id="password"]'.</msg>
+<arg>${locator_password}</arg>
+<arg>text=abcd1234</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2025-02-28T17:01:41.815447" elapsed="0.073278"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2025-02-28T17:01:41.889169" level="INFO">Clicking element '//button[contains(text(),"Entrar")]'.</msg>
+<arg>${locator_button}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2025-02-28T17:01:41.888926" elapsed="0.082064"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2025-02-28T17:01:48.233761" level="INFO">Slept 3 seconds.</msg>
+<arg>3s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2025-02-28T17:01:41.971245" elapsed="6.262677"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${error_dados_errados}</arg>
+<arg>5</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2025-02-28T17:01:48.234309" elapsed="0.025324"/>
+</kw>
+<kw name="Element Should Be Visible" owner="SeleniumLibrary">
+<msg time="2025-02-28T17:01:48.279323" level="INFO">Element '//p[contains(text(),"E-mail ou senha inválidos!")]' is displayed.</msg>
+<arg>${error_dados_errados}</arg>
+<doc>Verifies that the element identified by ``locator`` is visible.</doc>
+<status status="PASS" start="2025-02-28T17:01:48.259835" elapsed="0.019613"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2025-02-28T17:01:51.280002" level="INFO">Slept 3 seconds.</msg>
+<arg>3s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2025-02-28T17:01:48.279665" elapsed="3.000467"/>
+</kw>
+<status status="PASS" start="2025-02-28T17:01:41.516852" elapsed="9.763413"/>
+</kw>
+<kw name="Fechar site" owner="keywords">
+<kw name="Close Browser" owner="SeleniumLibrary">
+<doc>Closes the current browser.</doc>
+<status status="PASS" start="2025-02-28T17:01:51.280846" elapsed="0.058101"/>
+</kw>
+<status status="PASS" start="2025-02-28T17:01:51.280525" elapsed="0.058598"/>
+</kw>
+<status status="PASS" start="2025-02-28T17:01:40.836965" elapsed="10.502429"/>
+</test>
+<test id="s1-t3" name="Cenário 3: Inserir e-mail inválido mas senha válida" line="15">
+<kw name="Abrir site" owner="keywords">
+<kw name="Open Browser" owner="SeleniumLibrary">
+<msg time="2025-02-28T17:01:51.340808" level="INFO">Opening browser 'Chrome' to base url 'https://horadoqa.github.io/ci-cd-robot-framework/'.</msg>
+<arg>${URL}</arg>
+<arg>${BROWSER}</arg>
+<arg>options=add_argument("--headless")</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<status status="PASS" start="2025-02-28T17:01:51.340552" elapsed="0.750679"/>
+</kw>
+<status status="PASS" start="2025-02-28T17:01:51.340254" elapsed="0.751169"/>
+</kw>
+<kw name="E-mail Inválido e Senha Válida" owner="keywords">
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2025-02-28T17:01:52.092459" level="INFO">Clicking element '//*[@id="username"]'.</msg>
+<arg>${locator_username}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2025-02-28T17:01:52.092168" elapsed="0.096770"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2025-02-28T17:01:52.190051" level="INFO">Typing text 'usuarioexamplecom' into text field '//*[@id="username"]'.</msg>
+<arg>${locator_username}</arg>
+<arg>text=usuarioexamplecom</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2025-02-28T17:01:52.189511" elapsed="0.112269"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2025-02-28T17:01:52.302272" level="INFO">Clicking element '//*[@id="password"]'.</msg>
+<arg>${locator_password}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2025-02-28T17:01:52.301997" elapsed="0.085263"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2025-02-28T17:01:52.387943" level="INFO">Typing text '1q2w3e4r' into text field '//*[@id="password"]'.</msg>
+<arg>${locator_password}</arg>
+<arg>text=1q2w3e4r</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2025-02-28T17:01:52.387617" elapsed="0.074495"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2025-02-28T17:01:52.462593" level="INFO">Clicking element '//button[contains(text(),"Entrar")]'.</msg>
+<arg>${locator_button}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2025-02-28T17:01:52.462315" elapsed="0.081823"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2025-02-28T17:01:55.544815" level="INFO">Slept 3 seconds.</msg>
+<arg>3s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2025-02-28T17:01:52.544370" elapsed="3.000788"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${error_dados_errados}</arg>
+<arg>5</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2025-02-28T17:01:55.545832" elapsed="0.035339"/>
+</kw>
+<kw name="Element Should Be Visible" owner="SeleniumLibrary">
+<msg time="2025-02-28T17:01:55.601640" level="INFO">Element '//p[contains(text(),"E-mail ou senha inválidos!")]' is displayed.</msg>
+<arg>${error_dados_errados}</arg>
+<doc>Verifies that the element identified by ``locator`` is visible.</doc>
+<status status="PASS" start="2025-02-28T17:01:55.581376" elapsed="0.020380"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2025-02-28T17:01:58.602444" level="INFO">Slept 3 seconds.</msg>
+<arg>3s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2025-02-28T17:01:55.601959" elapsed="3.000829"/>
+</kw>
+<status status="PASS" start="2025-02-28T17:01:52.091841" elapsed="6.511309"/>
+</kw>
+<kw name="Fechar site" owner="keywords">
+<kw name="Close Browser" owner="SeleniumLibrary">
+<doc>Closes the current browser.</doc>
+<status status="PASS" start="2025-02-28T17:01:58.604936" elapsed="0.059931"/>
+</kw>
+<status status="PASS" start="2025-02-28T17:01:58.603977" elapsed="0.061031"/>
+</kw>
+<status status="PASS" start="2025-02-28T17:01:51.339816" elapsed="7.325426"/>
+</test>
+<test id="s1-t4" name="Cenário 4: Inserir e-mail e senha inválidos" line="20">
+<kw name="Abrir site" owner="keywords">
+<kw name="Open Browser" owner="SeleniumLibrary">
+<msg time="2025-02-28T17:01:58.666497" level="INFO">Opening browser 'Chrome' to base url 'https://horadoqa.github.io/ci-cd-robot-framework/'.</msg>
+<arg>${URL}</arg>
+<arg>${BROWSER}</arg>
+<arg>options=add_argument("--headless")</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<status status="PASS" start="2025-02-28T17:01:58.666234" elapsed="0.769273"/>
+</kw>
+<status status="PASS" start="2025-02-28T17:01:58.665935" elapsed="0.769824"/>
+</kw>
+<kw name="Ambos Inválidos" owner="keywords">
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2025-02-28T17:01:59.437388" level="INFO">Clicking element '//*[@id="username"]'.</msg>
+<arg>${locator_username}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2025-02-28T17:01:59.436969" elapsed="0.094776"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2025-02-28T17:01:59.532259" level="INFO">Typing text 'usuarioexample.com' into text field '//*[@id="username"]'.</msg>
+<arg>${locator_username}</arg>
+<arg>text=usuarioexample.com</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2025-02-28T17:01:59.531984" elapsed="0.107024"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2025-02-28T17:01:59.639457" level="INFO">Clicking element '//*[@id="password"]'.</msg>
+<arg>${locator_password}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2025-02-28T17:01:59.639210" elapsed="0.082904"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2025-02-28T17:01:59.722601" level="INFO">Typing text 'abcd1234' into text field '//*[@id="password"]'.</msg>
+<arg>${locator_password}</arg>
+<arg>text=abcd1234</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2025-02-28T17:01:59.722315" elapsed="0.072352"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2025-02-28T17:01:59.795147" level="INFO">Clicking element '//button[contains(text(),"Entrar")]'.</msg>
+<arg>${locator_button}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2025-02-28T17:01:59.794891" elapsed="0.079354"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2025-02-28T17:02:02.875019" level="INFO">Slept 3 seconds.</msg>
+<arg>3s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2025-02-28T17:01:59.874449" elapsed="3.001014"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${error_dados_errados}</arg>
+<arg>5</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2025-02-28T17:02:02.876081" elapsed="0.042396"/>
+</kw>
+<kw name="Element Should Be Visible" owner="SeleniumLibrary">
+<msg time="2025-02-28T17:02:02.943615" level="INFO">Element '//p[contains(text(),"E-mail ou senha inválidos!")]' is displayed.</msg>
+<arg>${error_dados_errados}</arg>
+<doc>Verifies that the element identified by ``locator`` is visible.</doc>
+<status status="PASS" start="2025-02-28T17:02:02.918948" elapsed="0.024802"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2025-02-28T17:02:05.944310" level="INFO">Slept 3 seconds.</msg>
+<arg>3s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2025-02-28T17:02:02.943964" elapsed="3.000518"/>
+</kw>
+<status status="PASS" start="2025-02-28T17:01:59.436340" elapsed="6.508292"/>
+</kw>
+<kw name="Fechar site" owner="keywords">
+<kw name="Close Browser" owner="SeleniumLibrary">
+<doc>Closes the current browser.</doc>
+<status status="PASS" start="2025-02-28T17:02:05.945409" elapsed="0.109485"/>
+</kw>
+<status status="PASS" start="2025-02-28T17:02:05.945001" elapsed="0.110054"/>
+</kw>
+<status status="PASS" start="2025-02-28T17:01:58.665519" elapsed="7.389961"/>
+</test>
+<test id="s1-t5" name="Cenário 5: Inserir e-mail e senha válidos" line="25">
+<kw name="Abrir site" owner="keywords">
+<kw name="Open Browser" owner="SeleniumLibrary">
+<msg time="2025-02-28T17:02:06.057289" level="INFO">Opening browser 'Chrome' to base url 'https://horadoqa.github.io/ci-cd-robot-framework/'.</msg>
+<arg>${URL}</arg>
+<arg>${BROWSER}</arg>
+<arg>options=add_argument("--headless")</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<status status="PASS" start="2025-02-28T17:02:06.056814" elapsed="0.743517"/>
+</kw>
+<status status="PASS" start="2025-02-28T17:02:06.056456" elapsed="0.744071"/>
+</kw>
+<kw name="Ambos Válidos" owner="keywords">
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2025-02-28T17:02:06.801544" level="INFO">Clicking element '//*[@id="username"]'.</msg>
+<arg>${locator_username}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2025-02-28T17:02:06.801243" elapsed="0.100124"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2025-02-28T17:02:06.901985" level="INFO">Typing text 'usuario@example.com' into text field '//*[@id="username"]'.</msg>
+<arg>${locator_username}</arg>
+<arg>text=usuario@example.com</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2025-02-28T17:02:06.901688" elapsed="0.107184"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2025-02-28T17:02:07.009354" level="INFO">Clicking element '//*[@id="password"]'.</msg>
+<arg>${locator_password}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2025-02-28T17:02:07.009085" elapsed="0.082412"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2025-02-28T17:02:07.091986" level="INFO">Typing text '1q2w3e4r' into text field '//*[@id="password"]'.</msg>
+<arg>${locator_password}</arg>
+<arg>text=1q2w3e4r</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2025-02-28T17:02:07.091697" elapsed="0.072305"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2025-02-28T17:02:07.164463" level="INFO">Clicking element '//button[contains(text(),"Entrar")]'.</msg>
+<arg>${locator_button}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2025-02-28T17:02:07.164222" elapsed="0.281548"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2025-02-28T17:02:10.446418" level="INFO">Slept 3 seconds.</msg>
+<arg>3s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2025-02-28T17:02:07.446003" elapsed="3.000593"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${validar}</arg>
+<arg>5</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2025-02-28T17:02:10.447044" elapsed="0.029372"/>
+</kw>
+<kw name="Element Should Be Visible" owner="SeleniumLibrary">
+<msg time="2025-02-28T17:02:10.497028" level="INFO">Element '//h1[contains(text(),"Bem-vindo")]' is displayed.</msg>
+<arg>${validar}</arg>
+<doc>Verifies that the element identified by ``locator`` is visible.</doc>
+<status status="PASS" start="2025-02-28T17:02:10.476659" elapsed="0.020505"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2025-02-28T17:02:30.497701" level="INFO">Slept 20 seconds.</msg>
+<arg>20s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2025-02-28T17:02:10.497344" elapsed="20.000498"/>
+</kw>
+<status status="PASS" start="2025-02-28T17:02:06.800890" elapsed="23.697105"/>
+</kw>
+<kw name="Fechar site" owner="keywords">
+<kw name="Close Browser" owner="SeleniumLibrary">
+<doc>Closes the current browser.</doc>
+<status status="PASS" start="2025-02-28T17:02:30.498590" elapsed="0.060033"/>
+</kw>
+<status status="PASS" start="2025-02-28T17:02:30.498276" elapsed="0.060517"/>
+</kw>
+<status status="PASS" start="2025-02-28T17:02:06.055926" elapsed="24.503160"/>
+</test>
+<status status="PASS" start="2025-02-28T17:01:30.670764" elapsed="59.888912"/>
+</suite>
+<statistics>
+<total>
+<stat pass="5" fail="0" skip="0">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat pass="5" fail="0" skip="0" id="s1" name="Suite De Testes">Suite De Testes</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>
